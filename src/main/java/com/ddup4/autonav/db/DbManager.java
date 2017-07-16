@@ -123,4 +123,14 @@ public class DbManager {
 		}
 		return false;
 	}
+	
+	public static void main(String[] args) {
+		NavBean bean = new NavBean();
+//		bean.setPhone("15201580861");
+//		bean.setLongtitude("56");
+//		bean.setLatitude("78");
+//		inserBean(bean);
+		int id = 3;
+		System.out.println("delete method ====>   " + delBeanById(id));
+	}
 }

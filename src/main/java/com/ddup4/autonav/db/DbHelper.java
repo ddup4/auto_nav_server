@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class DbHelper {
-	private static final String url = "jdbc:mysql//localhost:3306/db_autonav";
+	private static final String url = "jdbc:mysql://localhost:3306/db_autonav";
 	private static final String name = "com.mysql.jdbc.Driver";
 	private  static final String user = "root";
 	private static final String password = "root";
