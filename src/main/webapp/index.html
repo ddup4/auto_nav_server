@@ -54,7 +54,7 @@ div {
 		// read list from server
 		syncGpsInfoListWithServer();
 	});
-	//选择经度
+	//选择纬度
 	function selectorWE() {
 		var objSelect = $("#select_lat");
 		var optionSelected = objSelect.children('option').val();
@@ -71,11 +71,11 @@ div {
 			return null;
 		}
 		if (!latVal) {
-			alert("请输入经度");
+			alert("请输入纬度");
 			return null;
 		}
 		if (!lgtVal) {
-			alert("请输入纬度");
+			alert("请输入经度");
 			return null;
 		}
 		$.ajax({
@@ -169,8 +169,8 @@ div {
 		}
 		$.each(data.data, function(index, item) {
 							var phone = "手机号：" + item.phone;
-							var lat = "经度:" + item.latitude;
-							var lgt = "纬度:" + item.longtitude;
+							var lat = "纬度:" + item.latitude;
+							var lgt = "经度:" + item.longtitude;
 							var itemDiv = "<div class='list_item ui-widget ui-corner-all'><button >"
 									+ phone
 									+ "</button><br>"
@@ -189,8 +189,8 @@ div {
 	function addNavBeanItem(item) {
 		var rootDiv = $("#gps_info_list");
 		var phone = "手机号：" + item.phone;
-		var lat = "经度:" + item.latitude;
-		var lgt = "纬度:" + item.longtitude;
+		var lat = "纬度:" + item.latitude;
+		var lgt = "经度:" + item.longtitude;
 		var itemDiv = "<div class='list_item ui-widget ui-corner-all'><button >"
 				+ phone + "</button><br>" + lat + "</br>" + lgt
 				+ "</br><button delbyId='" + item.id + "'onclick='deleteById("
@@ -208,8 +208,8 @@ div {
 				<h3>添加</h3>
 				<div>
 					手机：<input type="tel" name="phone" id="phone" value="" /></br> 
-					经度：<!-- <select id="select_lat" onchange="selectorWE()"><option value="W">东经</option><option value="E">西经</option></select> --><input type="text" name="lat" id="lat" value="" /></br> 
-					纬度：<!-- <select><option value="lgtN">北纬</option><option value="ltgS">南纬</option></select> --><input type="text" name="lgt" id="lgt" value="" /></br> 
+					纬度：<!-- <select id="select_lat" onchange="selectorWE()"><option value="W">东经</option><option value="E">西经</option></select> --><input type="text" name="lat" id="lat" value="" /></br> 
+					经度：<!-- <select><option value="lgtN">北纬</option><option value="ltgS">南纬</option></select> --><input type="text" name="lgt" id="lgt" value="" /></br> 
 					<button name="add" id="add" onclick="save()" >保存</button>
 				</div>
 				<!-- <h3>查询</h3>
